@@ -35,7 +35,7 @@ public class StudentController {
         studentRepository.save(student);
         return new RedirectView("list");
     }
-    @PostMapping("/showUpdateForm")
+    @PostMapping("/showUpdateDisciplineForm")
     public ModelAndView showUpdateForm(@RequestParam Long studentId) {
         ModelAndView mav = new ModelAndView("add-student-form");
         Optional<Student> optionalStudent = studentRepository.findById(studentId);
